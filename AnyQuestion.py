@@ -19,8 +19,6 @@ options.add_argument("--headless")
 optionsoptions.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
-
-
 class AnyQuestion:
     def __init__(self):
         self.embeddings = OllamaEmbeddings(model="llama3")
@@ -54,7 +52,7 @@ class AnyQuestion:
 
     def load_and_process_url(self, url):
         try:
-            loader = SeleniumURLLoader(urls=[url])
+            loader = SeleniumURLLoader(urls=[url], driver=driver)
             documents = loader.load()
             
             if not documents:
