@@ -18,6 +18,7 @@ options = Options()
 options.add_argument("--headless")
 optionsoptions.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options
 
 class AnyQuestion:
     def __init__(self):
