@@ -2,6 +2,6 @@ streamlit
 langchain
 langchain-core
 langchain-ollama
-langchain_community
+langchain-community
 selenium
 webdriver-manager
