@@ -9,6 +9,18 @@ from langchain_ollama import OllamaEmbeddings
 from langchain_community.llms import Ollama
 from langchain_core.prompts import PromptTemplate
 
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+
+options = Options()
+options.add_argument("--headless")
+optionsoptions.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+
+
+
 class AnyQuestion:
     def __init__(self):
         self.embeddings = OllamaEmbeddings(model="llama3")
