@@ -3,7 +3,7 @@ import base64
 from pathlib import Path
 
 #from langchain_community.document_loaders import SeleniumURLLoader
-rom langchain_community.document_loaders import RequestsURLLoader
+from langchain_community.document_loaders import RequestsURLLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import InMemoryVectorStore
 from langchain_ollama import OllamaEmbeddings
