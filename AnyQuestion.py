@@ -2,11 +2,11 @@ import streamlit as st
 import base64
 from pathlib import Path
 
-from langchain-community.document_loaders import SeleniumURLLoader
+from langchain_community.document_loaders import SeleniumURLLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain-community.vectorstores import InMemoryVectorStore
+from langchain_community.vectorstores import InMemoryVectorStore
 from langchain_ollama import OllamaEmbeddings
-from langchain-community.llms import Ollama
+from langchain_community.llms import Ollama
 from langchain_core.prompts import PromptTemplate
 
 
