@@ -2,8 +2,8 @@ import streamlit as st
 import base64
 from pathlib import Path
 
-#from langchain_community.document_loaders import SeleniumURLLoader
-from langchain_community.document_loaders import RequestsURLLoader
+from langchain_community.document_loaders import SeleniumURLLoader
+#from langchain_community.document_loaders import RequestsURLLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import InMemoryVectorStore
 from langchain_ollama import OllamaEmbeddings
@@ -13,13 +13,13 @@ from langchain_core.prompts import PromptTemplate
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-#from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 
-#options = Options()
-#options.add_argument("--headless")
-#optionsoptions.add_argument("--no-sandbox")
-#options.add_argument("--disable-dev-shm-usage")
-#driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+options = Options()
+options.add_argument("--headless")
+optionsoptions.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 class AnyQuestion:
     def __init__(self):
@@ -54,7 +54,7 @@ class AnyQuestion:
 
     def load_and_process_url(self, url):
         try:
-            loader = RequestsURLLoader(urls=[url])
+            loader = SeleniumURLLoader(urls=[url], driver=driver)
             documents = loader.load()
             
             if not documents:
