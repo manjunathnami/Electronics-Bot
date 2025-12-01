@@ -4,3 +4,4 @@ langchain-core
 langchain-ollama
 langchain-community
 selenium
+webdriver-manager
