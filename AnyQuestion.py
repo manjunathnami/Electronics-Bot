@@ -2,7 +2,8 @@ import streamlit as st
 import base64
 from pathlib import Path
 
-from langchain_community.document_loaders import SeleniumURLLoader
+from langchain.document_loaders import SeleniumURLLoader
+#from langchain_community.document_loaders import SeleniumURLLoader
 #from langchain_community.document_loaders import RequestsURLLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import InMemoryVectorStore
